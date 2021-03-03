@@ -1,0 +1,45 @@
+button {
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: $white;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+// .bookmark-button {
+//     background-color: $lightGray;
+//     color: $darkGray;
+
+//     &:hover {
+//         opacity: 0.5;
+//     }
+// }
+
+.green-button {
+    background-color: $moderateCyan;
+
+    &:hover {
+        background-color: $darkCyan;
+    }
+}
+
+.disabled-button {
+    background-color: $darkGray;
+    
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+
+.content-buttons {
+    
+    a {
+        background-color: $lightGray;
+        color: $darkGray;
+    }
+}

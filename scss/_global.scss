@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $lightGray;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    color: $darkGray;
+}
+
+.white {
+    background-color: $white;
+    color: $black;
+}
+
+.primary {
+    color: $moderateCyan;
+}
+
+.secondary {
+    color: $darkGray;
+}
+
+.border {
+    border: 1px dashed $moderateCyan;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 40px 40px;
+    // border: 1px dashed $moderateCyan;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 100%;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.navbar {
+    position: relative;
+}
+
+.content-container {
+    position: absolute;
+    top: 360px;
+    left: 610px;
+
+}
+
+.content-header {
+    text-align: center;    
+    border-radius: 15px;
+    position: relative;
+    max-width: 600px;
+
+    img {
+        position: absolute;
+        top: -28px;
+        left: 300px;
+    }
+
+    .content-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.content-totals {
+    border-radius: 15px;
+    max-width: 600px;
+
+    .totals {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h1 {
+            margin: 0;
+        }
+
+        span {
+            color: $darkGray;
+            vertical-align: middle;
+        }
+
+        .backed-total {
+            padding-right: 40px;
+        }
+
+        .backers-total {
+            padding-left: 40px;
+            padding-right: 80px;
+        }
+
+        .days-left {
+            padding-left: 40px;
+        }
+    }
+
+    .backers-total {
+        border-left: 2px solid $lightGray;
+        border-right: 2px solid $lightGray;
+    }
+
+    .slider {
+        margin: 20px auto;
+        position: relative;
+        width: 600px;
+        background-color: $lightGray;
+        border-radius: 15px;
+        height: 10px;
+
+        button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0;
+            height: 10px;
+            width: 460px;
+            background-color: $moderateCyan;
+            border-radius: 15px;
+        }
+    }
+}
+
+.about-project {
+    border-radius: 15px;
+    max-width: 600px;
+
+    .about-option {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid $lightGray;
+
+        .about-option-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                color: $moderateCyan;
+            }
+        }
+
+        .about-option-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                display: inline-block;
+            }
+
+            span {
+                color: $darkGray;
+                // vertical-align: middle;
+                // align-self: center;
+                margin-left: 5px;
+            }
+        }
+    }
+}
