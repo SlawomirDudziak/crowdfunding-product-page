@@ -31,6 +31,10 @@ p {
     color: $darkGray;
 }
 
+// .bold {
+//     font-weight: bold;
+// }
+
 .border {
     border: 1px dashed $moderateCyan;
 }
@@ -47,6 +51,11 @@ p {
     justify-content: space-between;
     align-items: center;
     // height: 100%;
+}
+
+.font-big {
+    font-size: $font-big;
+    font-weight: bold;
 }
 
 .disabled {

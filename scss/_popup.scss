@@ -2,7 +2,7 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 10; /* Sit on top */
-    left: 20%;
+    left: 50%;
     top: 2%;
     overflow: auto; /* Enable scroll if needed */
     border-radius: 15px;
@@ -10,6 +10,7 @@
     // padding-top: 100px; /* Location of the box */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
+    transform: translateX(-50%);
     // background-color: rgb(0,0,0); /* Fallback color */
     // background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -20,14 +21,48 @@
     padding: 20px;
     width: 80%;
 
+    .close-modal {
+        &:hover {
+            // color: $black;
+        }
+    }
+
     .about-option {
         margin-top: 20px;
         padding: 20px;
         border-radius: 15px;
         border: 1px solid $lightGray;
+
+        input[type=radio] {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        input[type=number] {
+            border: 1px solid $lightGray;
+            outline: none;
+            padding: 15px 20px;
+            border-radius: 30px;
+            color: $black;
+            font-weight: bold;
+
+            &:hover {
+                border-color: $moderateCyan;
+                cursor: pointer;
+            }
+        }
     }
 
     .selected {
         border: 2px solid $moderateCyan;
+
+        .primary {
+            font-weight: bold;
+        }
     }
   }

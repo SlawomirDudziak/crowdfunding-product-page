@@ -54,6 +54,11 @@ p {
           align-items: center;
 }
 
+.font-big {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .disabled {
   opacity: 0.5;
 }
@@ -278,7 +283,7 @@ button:hover {
   /* Stay in place */
   z-index: 10;
   /* Sit on top */
-  left: 20%;
+  left: 50%;
   top: 2%;
   overflow: auto;
   /* Enable scroll if needed */
@@ -288,6 +293,8 @@ button:hover {
   /* Full width */
   height: 100%;
   /* Full height */
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .modal-content {
@@ -304,7 +311,35 @@ button:hover {
   border: 1px solid #dbdbdb;
 }
 
+.modal-content .about-option input[type=radio] {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.modal-content .about-option input[type=radio]:hover {
+  cursor: pointer;
+}
+
+.modal-content .about-option input[type=number] {
+  border: 1px solid #dbdbdb;
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.modal-content .about-option input[type=number]:hover {
+  border-color: #3cb4ac;
+  cursor: pointer;
+}
+
 .modal-content .selected {
   border: 2px solid #3cb4ac;
+}
+
+.modal-content .selected .primary {
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
