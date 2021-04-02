@@ -52,6 +52,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .font-big {
@@ -315,9 +317,15 @@ button:hover {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  border-color: #3cb4ac;
 }
 
 .modal-content .about-option input[type=radio]:hover {
+  cursor: pointer;
+}
+
+.modal-content .about-option h3:hover {
+  color: #3cb4ac;
   cursor: pointer;
 }
 

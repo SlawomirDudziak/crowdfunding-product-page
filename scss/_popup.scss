@@ -37,8 +37,16 @@
             height: 50px;
             width: 50px;
             border-radius: 50%;
+            border-color: $moderateCyan;
 
             &:hover {
+                cursor: pointer;
+            }
+        }
+
+        h3 {
+            &:hover {
+                color: $moderateCyan;
                 cursor: pointer;
             }
         }
