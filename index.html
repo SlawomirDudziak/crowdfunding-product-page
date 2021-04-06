@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="navbar border">
+  <div class="navbar">
     <div class="container flex">
       <img src="images/logo.svg" alt="logo" />
 
@@ -91,7 +91,7 @@
               <h1>101</h1>
               <span>left</span>
             </div>
-            <button class="green-button">
+            <button class="green-button select-reward">
               Select reward
             </button>
           </div>
@@ -115,7 +115,7 @@
               <span>left</span>
             </div>
             
-            <button class="green-button">
+            <button class="green-button select-reward">
               Select reward
             </button>
           </div>
@@ -189,7 +189,7 @@
       <hr>
       <span class="secondary">Enter your pledge</span>
       <input type="number" name="" id="" value="25">
-      <button class="green-button">Continue</button>
+      <button class="green-button modal-button">Continue</button>
     </div>
     <!-- Selected pledge end -->
 
@@ -232,12 +232,20 @@
   </div>
 
   <!-- Success modal start -->
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
+  <div id ="success-modal" class="success-modal about-project container white">
+    <img src="images/icon-check.svg" alt="">
+    <h2>Thanks for your support!</h2>
+    <p>
+      Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+      an email once our campaign is completed.
+    </p>
+    <button id="success-modal-button" class="green-button">
+      Got it!
+    </button>
+    <!-- Success modal end -->
 
-  <!-- Success modal end -->
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>

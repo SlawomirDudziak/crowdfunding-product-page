@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const buttons = document.querySelectorAll('.green-button');
+    const buttons = document.querySelectorAll('.select-reward');
+    const modalButton = document.querySelector('.modal-button');
+    const successModalButton = document.querySelector('#success-modal-button');
     const closeButton = document.querySelector('.close-modal');
     const option1Header = document.getElementById('option1');
     const option2Header = document.getElementById('option2');
@@ -28,6 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
         closeForm();
     });
 
+    modalButton.addEventListener('click', () => {
+        closeForm();
+        openSuccessModal();
+    });
+
+    successModalButton.addEventListener('click', () => {
+        closeSuccessModal();
+    })
+
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             openForm();
@@ -45,5 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function removeSelection() {
         const options = document.querySelectorAll('.about-option');
         options.forEach(option => option.classList.remove("selected"));
+    }
+
+    function openSuccessModal() {
+        document.getElementById("success-modal").style.display = "block";
+    }
+
+    function closeSuccessModal() {
+        document.getElementById("success-modal").style.display = "none";
     }
 })

@@ -74,3 +74,14 @@
         }
     }
   }
+
+  .success-modal {
+      display: none;
+      position: fixed; /* Stay in place */
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 25%;
+      text-align: center;
+      line-height: 2;
+      z-index: 30;
+  }
