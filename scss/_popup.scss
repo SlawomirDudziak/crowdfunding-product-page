@@ -4,7 +4,7 @@
     z-index: 10; /* Sit on top */
     left: 50%;
     top: 2%;
-    overflow: auto; /* Enable scroll if needed */
+    overflow: hidden; /* Enable scroll if needed */
     border-radius: 15px;
     max-width: 700px;
     // padding-top: 100px; /* Location of the box */
@@ -79,8 +79,9 @@
       display: none;
       position: fixed; /* Stay in place */
       left: 50%;
-      transform: translateX(-50%);
-      max-width: 25%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 24%;
       text-align: center;
       line-height: 2;
       z-index: 30;

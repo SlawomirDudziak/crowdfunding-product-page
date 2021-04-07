@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const buttons = document.querySelectorAll('.select-reward');
+    const bookmarkButton = document.querySelector('.bookmark-button');
     const modalButton = document.querySelector('.modal-button');
     const successModalButton = document.querySelector('#success-modal-button');
     const closeButton = document.querySelector('.close-modal');
@@ -37,7 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     successModalButton.addEventListener('click', () => {
         closeSuccessModal();
-    })
+    });
+
+    bookmarkButton.addEventListener('click', () => {
+        changeBookmarkButton();
+    });
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -64,5 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeSuccessModal() {
         document.getElementById("success-modal").style.display = "none";
+    }
+
+    function changeBookmarkButton() {
+        bookmarkButton.classList.toggle('bookmark');
+        bookmarkButton.classList.toggle('bookmarked');
+        bookmarkButton.innerText == 'Bookmarked' ? bookmarkButton.innerText = 'Bookmark' : bookmarkButton.innerText = 'Bookmarked'
     }
 })

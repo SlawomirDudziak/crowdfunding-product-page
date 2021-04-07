@@ -32,6 +32,14 @@ p {
     color: $darkGray;
 }
 
+.bookmark {
+    color: $darkGray;
+}
+
+.bookmarked {
+    color: $darkCyan;
+}
+
 // .bold {
 //     font-weight: bold;
 // }
@@ -81,7 +89,7 @@ p {
     position: relative;
     max-width: 600px;
 
-    img {
+    .logo {
         position: absolute;
         top: -28px;
         left: 300px;
