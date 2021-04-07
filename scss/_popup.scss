@@ -33,24 +33,6 @@
         border-radius: 15px;
         border: 1px solid $lightGray;
 
-        input[type=radio] {
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            border-color: $moderateCyan;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        h3 {
-            &:hover {
-                color: $moderateCyan;
-                cursor: pointer;
-            }
-        }
-
         input[type=number] {
             border: 1px solid $lightGray;
             outline: none;
