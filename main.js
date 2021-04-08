@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     closeButton.addEventListener('click', () => {
-        closeForm();
+        closeModal();
     });
 
     modalButton.addEventListener('click', () => {
-        closeForm();
+        closeModal();
         openSuccessModal();
     });
 
@@ -46,15 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            openForm();
+            openModal();
         });
     });
 
-    function openForm() {
+    function openModal() {
         document.getElementById("modal").style.display = "block";
     }
     
-    function closeForm() {
+    function closeModal() {
         document.getElementById("modal").style.display = "none";
     }
 
