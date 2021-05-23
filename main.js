@@ -8,24 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const option1Header = document.getElementById('option1');
     const option2Header = document.getElementById('option2');
     const option3Header = document.getElementById('option3');
+    const enterPledge2 = document.querySelector('#enter-pledge-2');
+    const enterPledge3 = document.querySelector('#enter-pledge-3');
 
     option1.addEventListener('click', () => {
         removeSelection();
         const aboutOption = option1Header.parentElement.parentElement;
         aboutOption.classList.add("selected");
-    })
+        removeEnterPledge(enterPledge2);
+        removeEnterPledge(enterPledge3);
+    });
 
     option2.addEventListener('click', () => {
         removeSelection();
         const aboutOption = option2Header.parentElement.parentElement;
         aboutOption.classList.add("selected");
-    })
+        toggleEnterPledge(enterPledge2);
+        removeEnterPledge(enterPledge3);
+    });
 
     option3.addEventListener('click', () => {
         removeSelection();
         const aboutOption = option3Header.parentElement.parentElement;
         aboutOption.classList.add("selected");
-    })
+        toggleEnterPledge(enterPledge3);
+        removeEnterPledge(enterPledge2);
+    });
 
     closeButton.addEventListener('click', () => {
         closeModal();
@@ -74,6 +82,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function changeBookmarkButton() {
         bookmarkButton.classList.toggle('bookmark');
         bookmarkButton.classList.toggle('bookmarked');
-        bookmarkButton.innerText == 'Bookmarked' ? bookmarkButton.innerText = 'Bookmark' : bookmarkButton.innerText = 'Bookmarked'
+        if (bookmarkButton.innerText == 'Bookmarked') {
+            // Bookmark
+            bookmarkButton.innerHTML = "<img src=\'images/icon-bookmark.svg\'><span class=\'bookmark-span\'>Bookmark</span>";
+        } else {
+            // Bookmarked
+            bookmarkButton.innerHTML = "<img src=\'images/icon-bookmark.svg\'><span class=\'bookmark-span\'>Bookmarked</span>";
+        }
+    }
+
+    function toggleEnterPledge(pledge) {
+        pledge.classList.toggle("none");
+        pledge.classList.toggle("block");
+    }
+
+    function removeEnterPledge(pledge) {
+        pledge.classList.add("none");
+        pledge.classList.remove("block");
     }
 })

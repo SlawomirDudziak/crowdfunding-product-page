@@ -12,16 +12,33 @@ button {
 }
 
 .bookmark-button {
+    display: flex;
+    padding: 0px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
 
     img {
-        // margin: 0;
-        // padding: 0;
-        height: 100%;
+        height: 46px;
     }
 
     &:hover {
         opacity: 0.5;
     }
+}
+
+.bookmark {
+    color: $darkGray;
+}
+
+.bookmarked {
+    color: $darkCyan;
+    padding: 0px;
+    padding-right: 20px;
+}
+
+.bookmark-span {
+    margin-left: 20px;
 }
 
 .green-button {
@@ -54,9 +71,9 @@ button {
     position: absolute;
     left: -9999px;
 }
+
 [type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
+[type="radio"]:not(:checked) + label {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
@@ -65,6 +82,7 @@ button {
     color: $black;
     font-weight: 700;
 }
+
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
     content: '';
@@ -77,6 +95,7 @@ button {
     border-radius: 100%;
     background: #fff;
 }
+
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
     content: '';
@@ -90,11 +109,13 @@ button {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+
 [type="radio"]:not(:checked) + label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
+
 [type="radio"]:checked + label:after {
     opacity: 1;
     -webkit-transform: scale(1);

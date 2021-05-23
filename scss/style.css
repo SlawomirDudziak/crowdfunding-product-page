@@ -33,14 +33,6 @@ p {
   color: #7a7a7a;
 }
 
-.bookmark {
-  color: #7a7a7a;
-}
-
-.bookmarked {
-  color: #147b74;
-}
-
 .border {
   border: 1px dashed #3cb4ac;
 }
@@ -72,10 +64,6 @@ p {
 
 .disabled {
   opacity: 0.5;
-}
-
-.navbar {
-  position: relative;
 }
 
 .content-container {
@@ -235,12 +223,40 @@ button:hover {
   cursor: pointer;
 }
 
+.bookmark-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  padding-right: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .bookmark-button img {
-  height: 100%;
+  height: 46px;
 }
 
 .bookmark-button:hover {
   opacity: 0.5;
+}
+
+.bookmark {
+  color: #7a7a7a;
+}
+
+.bookmarked {
+  color: #147b74;
+  padding: 0px;
+  padding-right: 20px;
+}
+
+.bookmark-span {
+  margin-left: 20px;
 }
 
 .green-button {
@@ -321,6 +337,7 @@ button:hover {
 }
 
 .navbar {
+  position: relative;
   background-image: url("../images/image-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -406,6 +423,20 @@ button:hover {
 .modal-content .about-option input[type=number]:hover {
   border-color: #3cb4ac;
   cursor: pointer;
+}
+
+.modal-content .about-option #enter-pledge-2,
+.modal-content .about-option #enter-pledge-3 {
+  border-top: 1px solid #7a7a7a;
+  width: 100%;
+}
+
+.modal-content .about-option .none {
+  display: none;
+}
+
+.modal-content .about-option .block {
+  display: block;
 }
 
 .modal-content .selected {

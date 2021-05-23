@@ -24,12 +24,6 @@
     animation-name: animatemodal;
     animation-duration: 0.5s;
 
-    .close-modal {
-        &:hover {
-            // color: $black;
-        }
-    }
-
     .about-option {
         margin-top: 20px;
         padding: 20px;
@@ -48,6 +42,20 @@
                 border-color: $moderateCyan;
                 cursor: pointer;
             }
+        }
+
+        #enter-pledge-2,
+        #enter-pledge-3 {
+            border-top: 1px solid $darkGray;
+            width: 100%;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .block {
+            display: block;
         }
     }
 
