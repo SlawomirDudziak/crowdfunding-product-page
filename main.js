@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const buttons = document.querySelectorAll('.select-reward');
     const bookmarkButton = document.querySelector('.bookmark-button');
-    const modalButton = document.querySelector('.modal-button');
+    const modalButtons = document.querySelectorAll('.modal-button');
     const successModalButton = document.querySelector('#success-modal-button');
     const closeButton = document.querySelector('.close-modal');
     const option1Header = document.getElementById('option1');
@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const option3Header = document.getElementById('option3');
     const enterPledge2 = document.querySelector('#enter-pledge-2');
     const enterPledge3 = document.querySelector('#enter-pledge-3');
+    const totalBackersHeader = document.querySelector('#backers_total');
+
+    let totalBackers = 5007;
+
+    updateTotalBackers();
 
     option1.addEventListener('click', () => {
         removeSelection();
@@ -39,9 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal();
     });
 
-    modalButton.addEventListener('click', () => {
-        closeModal();
-        openSuccessModal();
+    modalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            closeModal();
+            openSuccessModal();
+        });
     });
 
     successModalButton.addEventListener('click', () => {
@@ -77,6 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeSuccessModal() {
         document.getElementById("success-modal").style.display = "none";
+        totalBackers++;
+        updateTotalBackers();
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function updateTotalBackers() {
+        totalBackersHeader.innerHTML = numberWithCommas(totalBackers);
     }
 
     function changeBookmarkButton() {
