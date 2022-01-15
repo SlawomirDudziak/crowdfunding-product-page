@@ -11,10 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const enterPledge2 = document.querySelector('#enter-pledge-2');
     const enterPledge3 = document.querySelector('#enter-pledge-3');
     const totalBackersHeader = document.querySelector('#backers_total');
+    const totalHeader = document.querySelector('#total');
 
     let totalBackers = 5007;
+    let total = 89914;
 
     updateTotalBackers();
+    updateTotal();
 
     option1.addEventListener('click', () => {
         removeSelection();
@@ -48,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             closeModal();
             openSuccessModal();
+            total = total + parseInt(button.parentElement.children[1].value);
         });
     });
 
@@ -86,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("success-modal").style.display = "none";
         totalBackers++;
         updateTotalBackers();
+        updateTotal();
     }
 
     function numberWithCommas(x) {
@@ -94,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateTotalBackers() {
         totalBackersHeader.innerHTML = numberWithCommas(totalBackers);
+    }
+
+    function updateTotal() {
+        totalHeader.innerHTML = numberWithCommas(total);
     }
 
     function changeBookmarkButton() {
